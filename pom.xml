@@ -31,7 +31,7 @@ target platform and specify -Dntdll_target=msbuild on the mvn command line.
   <modelVersion>4.0.0</modelVersion>
   <groupId>log4j</groupId>
   <artifactId>log4j</artifactId>
-  <packaging>bundle</packaging>
+ <!--   <packaging>bundle</packaging>-->
   <name>Apache Log4j</name>
   <version>1.2.18-SNAPSHOT</version>
   <description>Apache Log4j 1.2</description>
@@ -86,6 +86,7 @@ target platform and specify -Dntdll_target=msbuild on the mvn command line.
     <url>http://www.apache.org</url>
   </organization>
   <build>
+  <pluginManagement>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -471,6 +472,7 @@ target platform and specify -Dntdll_target=msbuild on the mvn command line.
         </executions>
       </plugin>
     </plugins>
+    </pluginManagement>
     <testSourceDirectory>tests/src/java</testSourceDirectory>
     <testResources>
       <testResource>
